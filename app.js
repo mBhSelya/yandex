@@ -2,8 +2,8 @@ let arr = [],
   // m = document.getElementById('mValue').value,
   // n = document.getElementById('nValue').value,
   // x = document.getElementById('xValue').value,
-  m,
-  n,
+  m = 10,
+  n = 10,
   x = 1,
   arr2 = [],
   sosedi = 0
@@ -14,13 +14,11 @@ const creat = function (m, n) {
   for (i = 0; i < m * n; i++) {
     arr2.push(Math.floor(Math.random() * 2))
   }
-  return arr2
 }
 
 
-const func = function (arr2, sosedi, arr, m, n) {
-  n = document.getElementById('nValue').value
-  m = document.getElementById('mValue').value
+const func = function (arr2, sosedi, m, arr, n) {
+
   console.log('------------------------------')
   document.getElementById('inBorder').innerHTML = ""
   arr = []
@@ -56,9 +54,8 @@ const func = function (arr2, sosedi, arr, m, n) {
       arr = []
     }
   }
+
 }
-
-
 const timerFunc = function () {
   let timer = setInterval(() => func(arr2, sosedi, m, arr, n), 1000)
   setTimeout(() => { clearInterval(timer); console.log('------------------------------'); }, (x * 1000))

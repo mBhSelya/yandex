@@ -1,0 +1,21 @@
+.point {
+  margin: 10px;
+  display: inline;
+}
+
+.namePoint {
+  display: inline-block;
+  width: 30px;
+}
+
+.board {
+  display: table;
+  margin: 10px;
+  min-height: 10rem;
+  min-width: 10rem;
+  border: solid 2px black;
+}
+
+.inBoard {
+  margin: 10px;
+}

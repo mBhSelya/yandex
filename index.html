@@ -5,16 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
 </head>
 
 <body>
   <div>
     <div>
-      <div>
-        <input type="text">
+      <div class="point">
+        <span class="namePoint">M</span>
+        <input type="number" id="mValue" value="10">
       </div>
-      <div>
-        <input type="text">
+      <div class="point">
+        <span class="namePoint">N</span>
+        <input type="number" id="nValue" value="10">
+      </div>
+      <div class="point">
+        <span class="namePoint">sec</span>
+        <input type="number" id="xValue" value="10">
+      </div>
+      <button onclick="timerFunc()">start</button>
+      <button onclick="creat()">create</button>
+      <div class="board">
+        <div id="inBorder" class="inBoard"></div>
       </div>
     </div>
   </div>

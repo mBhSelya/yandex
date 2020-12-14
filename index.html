@@ -12,20 +12,23 @@
 <body>
   <div>
     <div>
-      <div class="point">
-        <span class="namePoint">M</span>
-        <input type="number" id="mValue" value="10">
+      <div>
+        <div class="point">
+          <span class="namePoint">M</span>
+          <input type="number" id="mValue" value="10">
+        </div>
+        <div class="point">
+          <span class="namePoint">N</span>
+          <input type="number" id="nValue" value="10">
+        </div>
+        <button class="createButt" onclick="creat(), disDisabled()" id="createButt">Create board</button>
+        <button class="startButt" onclick="timerFunc()" id="startButt" disabled>Start</button>
+        <div class="point">
+          <span class="namePoint">x</span>
+          <input type="number" id="xValue" value="10" class="xStart">
+        </div>
       </div>
-      <div class="point">
-        <span class="namePoint">N</span>
-        <input type="number" id="nValue" value="10">
-      </div>
-      <div class="point">
-        <span class="namePoint">sec</span>
-        <input type="number" id="xValue" value="10">
-      </div>
-      <button onclick="timerFunc()">start</button>
-      <button onclick="creat()">create</button>
+      <input type="file" onchange="readFile(this)">
       <div class="board">
         <div id="inBorder" class="inBoard"></div>
       </div>

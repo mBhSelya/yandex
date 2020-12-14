@@ -1,21 +1,36 @@
 .point {
-  margin: 10px;
-  display: inline;
+  margin: 5px;
+  display: inline-block;
 }
 
 .namePoint {
   display: inline-block;
-  width: 30px;
+  padding-right: 10px;
 }
 
 .board {
   display: table;
   margin: 10px;
-  min-height: 10rem;
-  min-width: 10rem;
+  min-height: 3rem;
+  min-width: 3rem;
   border: solid 2px black;
 }
 
 .inBoard {
   margin: 10px;
+}
+
+.createButt {
+  display: block;
+  width: 422px;
+  margin: 5px;
+}
+
+.startButt {
+  width: 338px;
+  margin: 5px;
+}
+
+.xStart {
+  width: 40px;
 }

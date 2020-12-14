@@ -1,7 +1,6 @@
 let arr = [],
   x = 1,
   arr2 = [],
-  arr3 = [],
   sosedi = 0
 
 const creat = function () {
@@ -59,7 +58,6 @@ const func = function () {
       arr = []
     }
   }
-
 }
 
 
@@ -82,9 +80,13 @@ function readFile(input) {
     arr2 = reader.result.split('')
     arr2.map((x, i) => { arr2[i] = Number(x) })
     console.log(arr2)
+    if (Number.isInteger(Math.sqrt(arr2.length))) {
+      document.getElementById('startButt').removeAttribute('disabled')
+      m = n = Math.sqrt(arr2.length)
+    arr = []
     for (i = 0; i < arr2.length; i++) {
-      if (i !== 0 && (i + 1) % m == 0) {
-        Array.prototype.push.apply(arr, arr2)
+      arr.push(arr2[i])
+      if (i !== 0 && (i + 1) % Math.sqrt(arr2.length) == 0) {
         for (let i in arr) {
           document.getElementById("inBorder").innerHTML += '<span>' + '| ' + arr[i] + ' ' + '</span>'
         }
@@ -92,8 +94,10 @@ function readFile(input) {
         arr = []
       }
     }
+    } else {
+      alert('Не правильный вид доски в файле! Требуется: 101010101010101.....(в одну строку) и корень из общего числа символов должен быть равен целому числу!')
+    }
     arr = []
-    console.log(arr2.length)
   }
 
   reader.onerror = function () {
